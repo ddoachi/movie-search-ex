@@ -8,20 +8,21 @@ export default class Search extends Component {
       <button class"btn btn-primary">
         Search!
       </button>
-
-      const inputEl = this.el.querySelector('input');
-      inputEl.addEventListener('input', (e) => ({
-      })
-      inputEl.addEventListener('keydown', (event) => ({
-        if (event.key === 'Enter') {
-          //
-        }
-      })
-
-      const btnEl = this.el.querySelector('button');
-      buttonEl.addEventListener('click', () => {
-        //
-      })
     `
+    const inputEl = this.el.querySelector('input');
+    inputEl.addEventListener('input', (e) => {
+      //
+    });
+
+    inputEl.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        //
+      }
+    });
+
+    const btnEl = this.el.querySelector('button');
+    btnEl.addEventListener('click', () => {
+      //
+    })
   }
 }
