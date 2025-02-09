@@ -5,7 +5,7 @@ export default class Search extends Component {
     this.el.classList.add('search');
     this.el.innerHTML = /* html */ `
       <input placeholder="Enter a movie title" />
-      <button class"btn btn-primary">
+      <button class="btn btn-primary">
         Search!
       </button>
     `
