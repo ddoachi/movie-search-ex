@@ -87,5 +87,11 @@ body {
   background-color: var(--color-area);
 }
 
+.search input::placeholder {
+  color: var(--color-white-30)
+}
+
 .search .btn {
+  flex-grow: 1;
+  max-width: 150px;
 }
