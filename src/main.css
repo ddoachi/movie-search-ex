@@ -69,3 +69,23 @@ body {
 .headline p {
   color: var(--color-white-30)
 }
+
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.search input {
+  flex-grow: 1;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  color: var(--color-white);
+  background-color: var(--color-area);
+}
+
+.search .btn {
+}
