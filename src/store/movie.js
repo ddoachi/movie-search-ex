@@ -24,7 +24,7 @@ export const searchMovies = async page => {
       store.state.movies = [
         ...store.state.movies,
         ...Search
-      ]
+      ];
       store.state.pageMax = Math.ceil(Number(totalResults) / 10);
     } else {
       store.state.message = Error;
