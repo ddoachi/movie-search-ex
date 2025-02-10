@@ -142,3 +142,11 @@ body {
   background-color: rgba(14,27,27,.3);
   backdrop-filter: blur(10px);
 }
+
+.movies .movie .info .year {
+  color: var(--color-primary)
+}
+
+.movies .movie .info .title {
+  color: var(--color-white)
+}
