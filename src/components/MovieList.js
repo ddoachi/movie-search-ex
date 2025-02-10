@@ -13,6 +13,7 @@ export default class MovieList extends Component {
     this.el.classList.add('movie-list')
     this.el.innerHTML = /* html */ `
       <div class="movies"></div>
+      <div class="the-loader"></div>
     `
 
     const movieEl = this.el.querySelector('.movies');
