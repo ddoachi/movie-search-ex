@@ -6,11 +6,11 @@ export default class Movie extends Component {
   async render() {
     this.el.classList.add('container', 'the-movie');
     this.el.innerHTML = /* html */ `
-      <div class="poster skeleton">
-        <div class="specs skeleton">
-          <div class="title skeleton"></div>
-          <div class="label skeleton"></div>
-        </div>
+      <div class="poster skeleton"></div>
+      <div class="specs">
+        <div class="title skeleton"></div>
+        <div class="labels skeleton"></div>
+        <div class="plot skeleton"></div>
       </div>
     `
 
@@ -23,7 +23,7 @@ export default class Movie extends Component {
     this.el.innerHTML = /* html */ `
       <div style="background-image: url(${bigPoster})" class="poster"></div>
       <div class="specs">
-        <div class="title skeleton">
+        <div class="title">
           ${movie.Title}
         </div>
         <div class="labels">
