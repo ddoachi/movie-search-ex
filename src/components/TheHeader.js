@@ -33,7 +33,7 @@ export default class TheHeader extends Component {
               `}).join('')}
         </ul>
       </nav>
-      <a>
+      <a href="#/about" class="user">
         <img src="https://heropy.blog/css/images/logo.png" alt="User">
       </a>
     `
