@@ -86,8 +86,8 @@ header nav ul li a {
   text-decoration: none;
 }
 
-header nav ul li a:active {
-  color: var(--color--primary);
+header nav ul li a.active {
+  color: var(--color-primary);
 }
 
 header .user {
