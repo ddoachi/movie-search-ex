@@ -23,19 +23,27 @@ export default class Movie extends Component {
           <span>${movie.Country}</span>
         </div>
         <div class="plot">
-          {$movie.Plot}
+          ${movie.Plot}
         </div>
         <div>
           <h3>Ratings</h3>
           ${movie.Ratings.map(rating => {
             return `<p>${rating.Source} - ${rating.Value}</p>`
           }).join('')}
+        </div>
+        <div>
           <h3>Actors</h3>
           <p>${movie.Actors}</p>
+        </div>
+        <div>
           <h3>Director</h3>
           <p>${movie.Director}</p>
+        </div>
+        <div>
           <h3>Production</h3>
           <p>${movie.Production}</p>
+        </div>
+        <div>
           <h3>Genre</h3>
           <p>${movie.Genre}</p>
         </div>
