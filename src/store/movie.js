@@ -20,7 +20,7 @@ export const searchMovies = async page => {
   }
   try {
     const res = await fetch('/api/movie', {
-      mothd: 'POST',
+      method: 'POST',
       body: JSON.stringify({
          title: store.state.searchText,
          page
@@ -48,7 +48,7 @@ export const getMovieDetails = async id => {
   try {
     // const res = await fetch(`https://www.omdbapi.com?apikey=f25e888&i=${id}&plot=full`)
     const res = await fetch('/api/movie', {
-      mothd: 'POST',
+      method: 'POST',
       body: JSON.stringify({
         id,
       })
