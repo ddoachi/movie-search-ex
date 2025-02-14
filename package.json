@@ -1,6 +1,7 @@
 {
   "name": "movie-searcher-ex",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "parcel ./index.html",
     "build": "parcel build ./index.html",
