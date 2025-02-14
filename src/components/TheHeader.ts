@@ -1,6 +1,16 @@
 import { Component } from '../core/common'
 
+interface State {
+  [key: string]: unknown
+  menus: {
+    name: string
+    href: string
+  }[]
+}
+
 export default class TheHeader extends Component {
+  public state!: State
+
   constructor() {
     super({
       tagName: 'header',
