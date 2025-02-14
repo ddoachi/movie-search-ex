@@ -10,7 +10,7 @@
   "include": [
     "src/**/*.ts",
     "api/**/*.ts"
-  ],
+, "src/routes/Movie.js"  ],
   "exclude": [
     "node_modules",
     "dist"

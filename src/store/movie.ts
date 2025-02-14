@@ -1,5 +1,23 @@
 import { Store } from '../core/common'
 
+interface SimpleMovie {
+  Title: string
+  Year: string
+  imdbID: string
+  Type: string
+  Poster: string
+}
+
+interface State {
+  searchText: string
+  page: number
+  pageMax: number
+  movies: SimpleMovie[]
+  loading: boolean
+  message: string
+  movie: SimpleMovie
+}
+
 const store = new Store({
   searchText: '',
   page: 1,
@@ -11,7 +29,7 @@ const store = new Store({
 })
 
 export default store;
-export const searchMovies = async page => {
+export const searchMovies = async (page: number) => {
   store.state.loading = true;
   store.state.page = page;
   if ( page === 1 ) {
@@ -44,7 +62,7 @@ export const searchMovies = async page => {
   }
 }
 
-export const getMovieDetails = async id => {
+export const getMovieDetails = async (id: string) => {
   try {
     // const res = await fetch(`https://www.omdbapi.com?apikey=f25e888&i=${id}&plot=full`)
     const res = await fetch('/api/movie', {
