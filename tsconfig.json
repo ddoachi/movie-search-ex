@@ -9,8 +9,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "api/**/*.ts"
-, "src/routes/Movie.ts"  ],
+    "api/**/*.ts",
+  ],
   "exclude": [
     "node_modules",
     "dist"
