@@ -79,11 +79,20 @@ export function createRouter(routes: Routes) {
   }
 }
 
+interface StoreObservers {
+  [key: string]: SubscribeCallback[]
+}
+
+interface SubscribeCallback {
+  (arg: unknown): void
+}
+
 //// Store ////
-export class Store {
-  constructor(state) {
-    this.state = {};
-    this.observers = {};
+export class Store<S> {
+  public state = {} as S
+  private observers = {} as StoreObservers
+
+  constructor(state: S) {
     for (const key in state) {
       Object.defineProperty(this.state, key, {
         get: () => state[key],
@@ -96,7 +105,7 @@ export class Store {
       })
     }
   }
-  subscribe(key, cb) {
+  subscribe(key: string, cb: SubscribeCallback) {
     Array.isArray(this.observers[key])
     ? this.observers[key].push(cb)
     : this.observers[key] = [cb]
