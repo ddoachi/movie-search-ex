@@ -7,6 +7,19 @@ export default class ChatBot extends Component {
     this.el.classList.add('chatbot')
     this.el.innerHTML = /* HTML */ `
       <div class="chats">
+        <ul>
+          ${chatStore.state.messages.map(msg => /* html */ `
+            <li class="${msg.role}">
+              ${msg.content}
+            </li>
+          `).join('')}
+        </ul>
+        <div class="input">
+          <input />
+          <button class="btn btn-primary">
+            <span class="material-symbols-outlined icon--open">send</span>
+          </button>
+        </div>
       </div>
       <div class="btn btn-circle chat-starter">
         <span class="material-symbols-outlined icon--open">chat</span>
