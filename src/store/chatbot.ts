@@ -54,4 +54,6 @@ export const sendMessages = async () => {
   }
 
 }
-export const resetMessages = () => {}
+export const resetMessages = () => {
+  store.state.messages = defaultMessages
+}
