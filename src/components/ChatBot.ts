@@ -90,10 +90,12 @@ export default class ChatBot extends Component {
     messageListEl?.scrollTo(0, messageListEl.scrollHeight || 0);
 
     inputEl?.focus()
-    const movieTitleEls = this.el.querySelectorAll('.movie-title')
+    const movieTitleEls = this.el.querySelectorAll<HTMLElement>('.movie-title')
     movieTitleEls.forEach((el) => {
       el.addEventListener('click', () => {
-        console.log(el)
+        const searchEl = document.querySelector<HTMLInputElement>('.search input')
+        if (!searchEl) return
+        searchEl.value = el.dataset.movieTitle || ''
       })
     })
   }
