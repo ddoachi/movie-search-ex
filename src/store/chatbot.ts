@@ -49,6 +49,8 @@ export const sendMessages = async () => {
     store.state.chatText = ''
   } catch (error) {
     console.log('sendMessage error:', error)
+  } finally {
+    store.state.loading = false
   }
 
 }
