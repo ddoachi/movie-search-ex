@@ -3,6 +3,11 @@ import { Component } from '../core/common'
 import chatStore, { sendMessages } from '../store/chatbot'
 
 export default class ChatBot extends Component {
+  constructor() {
+    super()
+    chatStore.subscribe('messages', () => this.render())
+    chatStore.subscribe('loading', () => this.render())
+  }
   render() {
     this.el.classList.add('chatbot')
     this.el.innerHTML = /* HTML */ `
