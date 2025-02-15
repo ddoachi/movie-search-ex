@@ -47,6 +47,11 @@ export default class ChatBot extends Component {
       }
     })
 
+    const buttonEl = this.el.querySelector('.input .btn')
+    buttonEl?.addEventListener('click', () => {
+      sendMessages()
+    })
+
     const chatStarterEl = this.el.querySelector('.chat-starter')
     chatStarterEl?.addEventListener('click', (event) => {
       event.stopPropagation()
