@@ -1,6 +1,6 @@
 import { Component } from '../core/common'
-
 import chatStore, { sendMessages } from '../store/chatbot'
+import movieStore, { searchMovies } from '../store/movie'
 
 export default class ChatBot extends Component {
   constructor() {
@@ -96,6 +96,8 @@ export default class ChatBot extends Component {
         const searchEl = document.querySelector<HTMLInputElement>('.search input')
         if (!searchEl) return
         searchEl.value = el.dataset.movieTitle || ''
+        movieStore.state.searchText = searchEl.value
+        searchMovies(1)
       })
     })
   }
