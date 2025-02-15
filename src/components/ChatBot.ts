@@ -50,5 +50,10 @@ export default class ChatBot extends Component {
         })
       }
     })
+
+    const chatsEl = this.el.querySelector('.chats')
+    chatsEl?.addEventListener('click', (event) => {
+      event.stopPropagation()
+    })
   }
 }
