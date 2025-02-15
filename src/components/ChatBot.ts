@@ -39,5 +39,10 @@ export default class ChatBot extends Component {
         <span class="material-symbols-outlined icon--close">close</span>
       </div>
     `
+
+    const chatStarterEl = this.el.querySelector('.chat-starter')
+    chatStarterEl?.addEventListener('click', () => {
+      this.el.classList.toggle('chatbot--on')
+    })
   }
 }
