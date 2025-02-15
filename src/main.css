@@ -519,6 +519,15 @@ footer a:hover {
   color: rgba(255,255,255,.3);
 }
 
+.chatbot li.assistant .movie-title {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.chatbot li.assistant .movie-title:hover {
+  text-decoration: underline;
+}
+
 .chatbot .chats li.assistant .the-loader {
   width: 13px;
   height: 13px;
