@@ -32,20 +32,24 @@ export const sendMessages = async () => {
     {role: 'user', content: store.state.chatText}
   ]
 
-  const res = await fetch('/api/chatbot', {
-    method: 'POST',
-    body: JSON.stringify({
-      messages: store.state.messages
+  try {
+    const res = await fetch('/api/chatbot', {
+      method: 'POST',
+      body: JSON.stringify({
+        messages: store.state.messages
+      })
     })
-  })
 
-  const message = await res.json()
-  store.state.messages = [
-    ...store.state.messages,
-    message
-  ]
+    const message = await res.json()
+    store.state.messages = [
+      ...store.state.messages,
+      message
+    ]
 
-  store.state.chatText = ''
+    store.state.chatText = ''
+  } catch (error) {
+    console.log('sendMessage error:', error)
+  }
 
 }
 export const resetMessages = () => {}
