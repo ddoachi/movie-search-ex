@@ -1,20 +1,14 @@
 import { Store } from '../core/common'
+import OpenAI from 'openai'
 
 interface State {
   chatText: string
-  messages: Message[]
+  messages: OpenAI.ChatCompletionMessageParam[]
   loading: boolean
-}
-
-interface Message {
-  role: 'assitant' | 'user'
-  content: string
 }
 
 const defaultMessages = [
   { role: 'assistant', content: '좋아하는 영화 장르나 제목을 알려주세요.'},
-  { role: 'user', content: '재미있는 액션 영화를 추천해 줘.'},
-  { role: 'assistant', content: '키아누 리브스가 주연으로 출연한 영화 존윅을 추천합니다.'},
 ]
 
 const store = new Store({

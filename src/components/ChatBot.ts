@@ -52,6 +52,11 @@ export default class ChatBot extends Component {
       }
     })
 
+
+    inputEl?.addEventListener('input', () => {
+      chatStore.state.chatText = inputEl.value
+    })
+
     const buttonEl = this.el.querySelector('.input .btn')
     buttonEl?.addEventListener('click', () => {
       sendMessages()
