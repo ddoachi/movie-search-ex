@@ -468,10 +468,21 @@ footer a:hover {
 }
 
 .chatbot .chats li {
-  /* max-width: 70%;
+  max-width: 70%;
   padding: 12px 18px;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 15px;
-  font-weight: 500; */
+  font-weight: 500;
+}
+
+.chatbot .chats li.assistant {
+  align-self: flex-start;
+  background-color: var(--color-white-5);
+}
+
+.chatbot .chats li.user {
+  align-self: flex-end;
+  background-color: var(--color-primary);
+  color: var(--color-black);
 }
 
