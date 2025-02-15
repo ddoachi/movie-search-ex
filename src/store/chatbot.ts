@@ -2,7 +2,7 @@ import { Store } from '../core/common'
 
 interface State {
   chatText: string
-  message: Message[]
+  messages: Message[]
   loading: boolean
 }
 
@@ -17,13 +17,35 @@ const defaultMessages = [
 
 const store = new Store({
   chatText: '',
-  messags: defaultMessages,
+  messages: defaultMessages,
   loading: false
 })
 
 export default store
-export const sendMessages = () => {
+export const sendMessages = async () => {
   if (!store.state.chatText.trim()) return
   if (store.state.loading) return
+
+  store.state.loading = true
+  store.state.messages = [
+    ...store.state.messages,
+    {role: 'user', content: store.state.chatText}
+  ]
+
+  const res = await fetch('/api/chatbot', {
+    method: 'POST',
+    body: JSON.stringify({
+      messages: store.state.messages
+    })
+  })
+
+  const message = await res.json()
+  store.state.messages = [
+    ...store.state.messages,
+    message
+  ]
+
+  store.state.chatText = ''
+
 }
 export const resetMessages = () => {}
