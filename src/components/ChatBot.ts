@@ -20,7 +20,13 @@ export default class ChatBot extends Component {
                   <span class="material-symbols-outlined">smart_toy</span>
                 </div>
                 `) : ''}
-              ${msg.content}
+              ${typeof msg.content === 'string'
+                  ? (msg.content.replace(
+                      /{{(.*)\/\/(.*)}}/g, 
+                      (match, ko, en) => /* html */ `
+                      <span class="movie-title" data-movie-title="${en}">${ko}</span>
+                    `)) 
+                  : ''}
             </li>
           `).join('')}
           ${chatStore.state.loading ? /* html */ `
