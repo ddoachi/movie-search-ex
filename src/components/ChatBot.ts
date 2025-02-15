@@ -10,6 +10,11 @@ export default class ChatBot extends Component {
         <ul>
           ${chatStore.state.messages.map(msg => /* html */ `
             <li class="${msg.role}">
+              ${msg.role === 'assistant' ? ( /* html */ `
+                <div class="photo">
+                  <span class="material-symbols-outlined">smart_toy</span>
+                </div>
+                `) : ''}
               ${msg.content}
             </li>
           `).join('')}
