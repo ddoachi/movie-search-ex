@@ -510,6 +510,12 @@ footer a:hover {
   color: rgba(255,255,255,.3);
 }
 
+.chatbot .chats li.assistant .the-loader {
+  width: 13px;
+  height: 13px;
+  border-width: 3px;
+}
+
 .chatbot .chats li.user {
   align-self: flex-end;
   border-bottom-right-radius: 4px;
