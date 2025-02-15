@@ -560,3 +560,5 @@ footer a:hover {
 
 .chatbot .chat-starter .icon--open { display: block; }
 .chatbot .chat-starter .icon--close { display: none; }
+.chatbot.chatbot--on .chat-starter .icon--open { display: none; }
+.chatbot.chatbot--on .chat-starter .icon--close { display: block; }

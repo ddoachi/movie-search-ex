@@ -35,7 +35,7 @@ export default class ChatBot extends Component {
         <div class="input">
           <input />
           <button class="btn btn-primary">
-            <span class="material-symbols-outlined icon--open">send</span>
+            <span class="material-symbols-outlined">send</span>
           </button>
         </div>
       </div>
