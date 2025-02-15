@@ -1,6 +1,6 @@
 import { Component } from '../core/common'
 
-import chatStore from '../store/chatbot'
+import chatStore, { sendMessages } from '../store/chatbot'
 
 export default class ChatBot extends Component {
   render() {
@@ -41,6 +41,11 @@ export default class ChatBot extends Component {
     `
 
     const inputEl = this.el.querySelector('input')
+    inputEl?.addEventListener('keydown', (event) => {
+      if (event instanceof KeyboardEvent && event.key === 'Enter') {
+        sendMessages()
+      }
+    })
 
     const chatStarterEl = this.el.querySelector('.chat-starter')
     chatStarterEl?.addEventListener('click', (event) => {
