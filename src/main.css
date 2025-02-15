@@ -487,9 +487,24 @@ footer a:hover {
 }
 
 .chatbot .chats li.assistant {
-  border-top-left-radius: 4px;
   align-self: flex-start;
+  border-top-left-radius: 4px;
   background-color: var(--color-white-5);
+  position: relative;
+}
+
+.chatbot .chats li.assistant .photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-white-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: -10px;
+  color: rgba(255,255,255,.3);
 }
 
 .chatbot .chats li.user {
