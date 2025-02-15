@@ -79,5 +79,8 @@ export default class ChatBot extends Component {
     chatsEl?.addEventListener('click', (event) => {
       event.stopPropagation()
     })
+
+    const messageListEl = this.el.querySelector('.chats ul');
+    messageListEl?.scrollTo(0, messageListEl.scrollHeight || 0);
   }
 }
