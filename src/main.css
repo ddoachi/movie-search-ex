@@ -455,6 +455,23 @@ footer a:hover {
   position: fixed;
   bottom: var(--position-right);
   right: var(--position-right);
-  z-index: 1;
+  z-index: 1; 
+}
+
+.chatbot .chats ul {
+  max-height: calc(100vh - 340px);
+  padding: 20px;
+  /* overflow: auto; */
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.chatbot .chats li {
+  /* max-width: 70%;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500; */
 }
 
