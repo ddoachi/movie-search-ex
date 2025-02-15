@@ -82,5 +82,7 @@ export default class ChatBot extends Component {
 
     const messageListEl = this.el.querySelector('.chats ul');
     messageListEl?.scrollTo(0, messageListEl.scrollHeight || 0);
+
+    inputEl.focus()
   }
 }
