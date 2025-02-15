@@ -40,6 +40,8 @@ export default class ChatBot extends Component {
       </div>
     `
 
+    const inputEl = this.el.querySelector('input')
+
     const chatStarterEl = this.el.querySelector('.chat-starter')
     chatStarterEl?.addEventListener('click', (event) => {
       event.stopPropagation()
@@ -47,6 +49,7 @@ export default class ChatBot extends Component {
       const offChats = () => this.el.classList.remove('chatbot--on')
       if (this.el.classList.contains('chatbot--on')) {
         window.addEventListener('click', offChats)
+        setTimeout(() => inputEl?.focus(), 300) // wait for the animation
       } else {
         window.removeEventListener('click', offChats)
       }
