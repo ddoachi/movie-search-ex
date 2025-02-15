@@ -20,7 +20,7 @@ const defaultMessages = [
 const store = new Store({
   chatText: '',
   messages: defaultMessages,
-  loading: false
+  loading: true
 })
 
 export default store

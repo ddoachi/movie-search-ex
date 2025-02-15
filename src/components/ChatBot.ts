@@ -18,6 +18,14 @@ export default class ChatBot extends Component {
               ${msg.content}
             </li>
           `).join('')}
+          ${chatStore.state.loading ? /* html */ `
+            <li class="assistant">
+                  <div class="photo">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                  </div>
+                  <div class="the-loader"></div>
+            </li>
+            ` : ''}
         </ul>
         <div class="input">
           <input />
