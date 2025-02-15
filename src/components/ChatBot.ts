@@ -44,10 +44,11 @@ export default class ChatBot extends Component {
     chatStarterEl?.addEventListener('click', (event) => {
       event.stopPropagation()
       this.el.classList.toggle('chatbot--on')
+      const offChats = () => this.el.classList.remove('chatbot--on')
       if (this.el.classList.contains('chatbot--on')) {
-        window.addEventListener('click', () => {
-          this.el.classList.remove('chatbot--on')
-        })
+        window.addEventListener('click', offChats)
+      } else {
+        window.removeEventListener('click', offChats)
       }
     })
 
