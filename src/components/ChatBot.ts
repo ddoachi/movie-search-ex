@@ -47,7 +47,7 @@ export default class ChatBot extends Component {
 
     const inputEl = this.el.querySelector('input')
     inputEl?.addEventListener('keydown', (event) => {
-      if (event instanceof KeyboardEvent && event.key === 'Enter') {
+      if (event instanceof KeyboardEvent && event.key === 'Enter' && !event.isComposing) { // process hangul
         sendMessages()
       }
     })
